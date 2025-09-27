@@ -46,6 +46,7 @@
     <Compile Include="Platforms\iOS\**\*.cs" />
     <None Include="Platforms\iOS\**\*.plist" />
   </ItemGroup>
+
   <ItemGroup>
     <MauiIcon Include="Resources/AppIcon/appicon.svg"
               ForegroundFile="Resources/AppIcon/appiconfg.svg"
