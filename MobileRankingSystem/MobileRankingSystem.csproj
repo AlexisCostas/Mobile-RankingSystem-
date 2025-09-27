@@ -11,6 +11,7 @@
     <OutputType>Exe</OutputType>
     <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net8.0-android'">21</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net8.0-ios'">14.2</SupportedOSPlatformVersion>
+    <SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,22 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-ios'">
+    <Compile Include="Platforms\iOS\**\*.cs" />
+    <None Include="Platforms\iOS\**\*.plist" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Platforms\**\*.cs" />
+    <None Remove="Platforms\**" />
+    <MauiXaml Remove="Platforms\**\*.xaml" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <Compile Include="Platforms\Android\**\*.cs" />
+    <None Include="Platforms\Android\AndroidManifest.xml" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
     <Compile Include="Platforms\iOS\**\*.cs" />
     <None Include="Platforms\iOS\**\*.plist" />
   </ItemGroup>
@@ -47,8 +64,7 @@
     <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
     <PackageReference Include="CommunityToolkit.Maui" Version="9.1.1" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-    <PackageReference Include="Syncfusion.Maui.Core" Version="31.1.21" />
-    <PackageReference Include="Syncfusion.Maui.Charts" Version="31.1.21" />
+    <PackageReference Include="Syncfusion.Maui.Toolkit" Version="1.0.7" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.9" />
   </ItemGroup>
 </Project>
