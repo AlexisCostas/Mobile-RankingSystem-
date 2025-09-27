@@ -10,13 +10,21 @@
     <ScrollView>
         <VerticalStackLayout Padding="24" Spacing="16">
             <Label Text="Team Rankings"
+                   Style="{StaticResource SectionHeader}" />
                    FontAttributes="Bold"
                    FontSize="24"
                    HorizontalOptions="Center" />
-
             <CollectionView ItemsSource="{Binding RankedTeams}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
+                        <Frame Margin="0,8" Style="{StaticResource CardFrame}">
+                            <VerticalStackLayout Spacing="8">
+                                <HorizontalStackLayout Spacing="12">
+                                    <Label Text="{Binding Rank}" FontAttributes="Bold" FontFamily="OpenSansSemibold" FontSize="20" />
+                                    <Label Text="{Binding TeamName}" FontAttributes="Bold" FontFamily="OpenSansSemibold" FontSize="20" />
+                                </HorizontalStackLayout>
+                                <Label Text="{Binding Summary}" FontSize="14" />
+                                <Label Text="{Binding PlayersSummary}" FontSize="12" TextColor="{StaticResource TextSecondary}" />
                         <Frame Padding="16" Margin="0,8" BackgroundColor="#EEF2FF" CornerRadius="12">
                             <VerticalStackLayout Spacing="8">
                                 <HorizontalStackLayout Spacing="12">
@@ -32,6 +40,7 @@
             </CollectionView>
 
             <Label Text="Upcoming Improvements"
+                   Style="{StaticResource SubsectionHeader}" />
                    FontAttributes="Bold"
                    FontSize="18"
                    HorizontalOptions="Center" />

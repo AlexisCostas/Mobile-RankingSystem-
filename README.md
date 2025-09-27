@@ -12,6 +12,8 @@ This repository hosts an MVP for a .NET MAUI application that ranks people who c
   - `Models/` – core domain entities such as players, teams, and match results.
   - `Services/RankingService.cs` – logic for creating balanced teams and converting match results into a ranking table.
   - `ViewModels/RankingViewModel.cs` – sample data pipeline that powers the UI.
+  - `Platforms/Android` and `Platforms/iOS` – platform entry points and manifests required by the MAUI tooling.
+  - `Resources/` – shared fonts, styles, splash screen, and app icon assets used by both platforms.
 
 ## Current functionality
 
@@ -26,7 +28,8 @@ This repository hosts an MVP for a .NET MAUI application that ranks people who c
 
 1. Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download) and the required MAUI workloads for Android (add iOS support if you're on macOS) by following the [official setup guide](https://learn.microsoft.com/dotnet/maui/get-started/installation).
 2. Clone the repository and open `MobileRankingSystem.sln` in Visual Studio 2022 (17.8 or later) or run `dotnet build MobileRankingSystem.sln` from a terminal with the MAUI workloads installed.
-3. Deploy primarily to Android (emulator or device); if you have access to the necessary tooling on macOS you can also target iOS from Visual Studio or the `dotnet` CLI.
+3. In Visual Studio, ensure that the **MobileRankingSystem** project is set as the startup project and choose an Android emulator or device from the run target dropdown before pressing **Run**. The included Android and iOS platform heads provide the necessary entry points for deployment.
+4. Deploy primarily to Android (emulator or device); if you have access to the necessary tooling on macOS you can also target iOS from Visual Studio or the `dotnet` CLI.
 
 ## Next steps
 

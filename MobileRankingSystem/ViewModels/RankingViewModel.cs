@@ -25,17 +25,24 @@ public class RankingViewModel
 
         var teams = rankingService.CreateBalancedTeams(players);
 
-        var matches = new List<MatchResult>
+        if (teams.Count >= 4)
         {
-            new(teams[0], teams[1], teams[0], 21, 17),
-            new(teams[2], teams[3], teams[3], 18, 21),
-            new(teams[0], teams[2], teams[0], 25, 20),
-            new(teams[1], teams[3], teams[3], 19, 21),
-            new(teams[0], teams[3], null, 22, 22)
-        };
+            var matches = new List<MatchResult>
+            {
+                new(teams[0], teams[1], teams[0], 21, 17),
+                new(teams[2], teams[3], teams[3], 18, 21),
+                new(teams[0], teams[2], teams[0], 25, 20),
+                new(teams[1], teams[3], teams[3], 19, 21),
+                new(teams[0], teams[3], null, 22, 22)
+            };
 
-        RankedTeams = new ObservableCollection<TeamRanking>(
-            rankingService.GenerateRankings(matches));
+            RankedTeams = new ObservableCollection<TeamRanking>(
+                rankingService.GenerateRankings(matches));
+        }
+        else
+        {
+            RankedTeams = new ObservableCollection<TeamRanking>();
+        }
     }
 
     public ObservableCollection<TeamRanking> RankedTeams { get; }

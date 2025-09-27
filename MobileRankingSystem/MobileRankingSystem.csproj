@@ -9,6 +9,8 @@
     <ApplicationId>com.example.mobilerankingsystem</ApplicationId>
     <ApplicationIdGuid>12345678-90ab-cdef-1234-567890abcdef</ApplicationIdGuid>
     <OutputType>Exe</OutputType>
+    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net8.0-android'">21</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net8.0-ios'">14.2</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,5 +23,18 @@
     <MauiXaml Update="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+  </ItemGroup>
+  <ItemGroup>
+    <MauiIcon Include="Resources/AppIcon/appicon.svg"
+              ForegroundFile="Resources/AppIcon/appiconfg.svg"
+              Color="#2563EB" />
+    <MauiSplashScreen Include="Resources/Splash/splash.svg" Color="#2563EB" />
+    <MauiImage Include="Resources/Images/*" />
+    <MauiAsset Include="Resources/Raw/*" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiFont Include="Resources/Fonts/OpenSans-Regular.ttf" Alias="OpenSansRegular" />
+    <MauiFont Include="Resources/Fonts/OpenSans-Semibold.ttf" Alias="OpenSansSemibold" />
   </ItemGroup>
 </Project>
