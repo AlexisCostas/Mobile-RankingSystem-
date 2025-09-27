@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="appGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1D4ED8" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="110" fill="url(#appGrad)" />
+  <g transform="translate(112 128)">
+    <rect x="0" y="48" width="288" height="176" rx="32" fill="rgba(255,255,255,0.2)" />
+    <rect x="24" y="72" width="240" height="128" rx="24" fill="#FFFFFF" opacity="0.9" />
+    <rect x="40" y="96" width="80" height="24" rx="12" fill="#2563EB" />
+    <rect x="168" y="96" width="80" height="24" rx="12" fill="#1E3A8A" />
+    <rect x="40" y="136" width="88" height="24" rx="12" fill="#4F46E5" />
+    <rect x="168" y="136" width="88" height="24" rx="12" fill="#3730A3" />
+    <circle cx="144" cy="192" r="16" fill="#60A5FA" />
+    <circle cx="208" cy="192" r="16" fill="#93C5FD" />
+    <circle cx="80" cy="192" r="16" fill="#3B82F6" />
+  </g>
+</svg>
