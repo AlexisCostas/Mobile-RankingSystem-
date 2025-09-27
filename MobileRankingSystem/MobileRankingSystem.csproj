@@ -14,15 +14,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <MauiXaml Update="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="AppShell.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
+    <Compile Remove="Platforms\**\*.cs" />
+    <Compile Remove="Platforms\**\*.xaml.cs" />
+    <None Remove="Platforms\**" />
+    <MauiXaml Remove="Platforms\**\*.xaml" />
   </ItemGroup>
 
   <ItemGroup>
