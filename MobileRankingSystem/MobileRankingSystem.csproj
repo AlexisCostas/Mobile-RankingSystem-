@@ -24,7 +24,6 @@
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
   </ItemGroup>
-
   <ItemGroup>
     <MauiIcon Include="Resources/AppIcon/appicon.svg"
               ForegroundFile="Resources/AppIcon/appiconfg.svg"
