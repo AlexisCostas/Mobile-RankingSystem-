@@ -11,28 +11,28 @@
         <VerticalStackLayout Padding="24" Spacing="16">
             <Label Text="Team Rankings"
                    Style="{StaticResource SectionHeader}" />
-                   FontAttributes="Bold"
-                   FontSize="24"
-                   HorizontalOptions="Center" />
+
             <CollectionView ItemsSource="{Binding RankedTeams}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Margin="0,8" Style="{StaticResource CardFrame}">
+                        <Frame Margin="0,8"
+                               Style="{StaticResource CardFrame}">
                             <VerticalStackLayout Spacing="8">
                                 <HorizontalStackLayout Spacing="12">
-                                    <Label Text="{Binding Rank}" FontAttributes="Bold" FontFamily="OpenSansSemibold" FontSize="20" />
-                                    <Label Text="{Binding TeamName}" FontAttributes="Bold" FontFamily="OpenSansSemibold" FontSize="20" />
+                                    <Label Text="{Binding Rank}"
+                                           FontAttributes="Bold"
+                                           FontFamily="OpenSansSemibold"
+                                           FontSize="20" />
+                                    <Label Text="{Binding TeamName}"
+                                           FontAttributes="Bold"
+                                           FontFamily="OpenSansSemibold"
+                                           FontSize="20" />
                                 </HorizontalStackLayout>
-                                <Label Text="{Binding Summary}" FontSize="14" />
-                                <Label Text="{Binding PlayersSummary}" FontSize="12" TextColor="{StaticResource TextSecondary}" />
-                        <Frame Padding="16" Margin="0,8" BackgroundColor="#EEF2FF" CornerRadius="12">
-                            <VerticalStackLayout Spacing="8">
-                                <HorizontalStackLayout Spacing="12">
-                                    <Label Text="{Binding Rank}" FontAttributes="Bold" FontSize="20" />
-                                    <Label Text="{Binding TeamName}" FontAttributes="Bold" FontSize="20" />
-                                </HorizontalStackLayout>
-                                <Label Text="{Binding Summary}" FontSize="14" />
-                                <Label Text="{Binding PlayersSummary}" FontSize="12" TextColor="#4B5563" />
+                                <Label Text="{Binding Summary}"
+                                       FontSize="14" />
+                                <Label Text="{Binding PlayersSummary}"
+                                       FontSize="12"
+                                       TextColor="{StaticResource TextSecondary}" />
                             </VerticalStackLayout>
                         </Frame>
                     </DataTemplate>
@@ -41,10 +41,10 @@
 
             <Label Text="Upcoming Improvements"
                    Style="{StaticResource SubsectionHeader}" />
-                   FontAttributes="Bold"
-                   FontSize="18"
-                   HorizontalOptions="Center" />
-            <Label Text="• Add persistent storage\n• Support manual match entry\n• Sync with cloud services" />
+
+            <Label Text="• Add persistent storage&#x0a;• Support manual match entry&#x0a;• Sync with cloud services"
+                   TextColor="{StaticResource TextSecondary}"
+                   FontSize="14" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

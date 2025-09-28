@@ -5,18 +5,20 @@
         <Setter Property="BackgroundColor" Value="{StaticResource PageBackground}" />
     </Style>
 
-    <Style TargetType="Label">
+    <Style x:Key="BaseLabelStyle" TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource TextPrimary}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
     </Style>
 
-    <Style x:Key="SectionHeader" TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+    <Style TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}" />
+
+    <Style x:Key="SectionHeader" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}">
         <Setter Property="FontSize" Value="24" />
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="HorizontalOptions" Value="Center" />
     </Style>
 
-    <Style x:Key="SubsectionHeader" TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+    <Style x:Key="SubsectionHeader" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}">
         <Setter Property="FontSize" Value="18" />
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="HorizontalOptions" Value="Center" />

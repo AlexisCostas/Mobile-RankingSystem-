@@ -8,14 +8,6 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <Color x:Key="PrimaryColor">#2563EB</Color>
-            <Color x:Key="SecondaryColor">#4F46E5</Color>
-            <Style TargetType="ContentPage">
-                <Setter Property="BackgroundColor" Value="White" />
-            </Style>
-            <Style TargetType="Label">
-                <Setter Property="TextColor" Value="#1F2937" />
-            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
