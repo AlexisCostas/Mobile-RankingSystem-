@@ -14,13 +14,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Platforms\**\*.cs" />
-    <Compile Remove="Platforms\**\*.xaml.cs" />
-    <None Remove="Platforms\**" />
-    <MauiXaml Remove="Platforms\**\*.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <MauiIcon Include="Resources/AppIcon/appicon.svg"
               ForegroundFile="Resources/AppIcon/appiconfg.svg"
               Color="#2563EB" />
